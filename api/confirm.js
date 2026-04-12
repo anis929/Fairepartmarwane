@@ -28,7 +28,7 @@ module.exports = async function handler(req, res) {
 
     const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
-    const notifBody = '🌹 Nouvelle confirmation — Nikah Marwane & Imane\n\n👤 ' + prenom + ' ' + nom + '\n📱 ' + telephone + '\n👥 ' + nb_invites + ' invite(s)\n\nبِإِذْنِ اللهِ';
+    const notifBody = '🌹 Nouvelle confirmation — Mariage Marwane & Imane\n\n👤 ' + prenom + ' ' + nom + '\n📱 ' + telephone + '\n👥 ' + nb_invites + ' invite(s)\n\nبِإِذْنِ اللهِ';
 
     await client.messages.create({
       body: notifBody,
@@ -43,7 +43,7 @@ module.exports = async function handler(req, res) {
     });
 
     await client.messages.create({
-      body: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ\n\nAssalamou Alaykoum ' + prenom + ',\n\nVotre presence au Nikah de Marwane & Imane a bien ete confirmee. Nous sommes heureux de vous compter parmi nous. 🌹\n\n📅 Samedi 1er Aout 2026\n📍 1 chemin des vignes, Saint Victor la Coste 30290\n\nبَارَكَ اللهُ فِيكُمْ',
+      body: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ\n\nAssalamou Alaykoum ' + prenom + ',\n\nVotre presence au Mariage de Marwane & Imane a bien ete confirmee. Nous sommes heureux de vous compter parmi nous. 🌹\n\n📅 Samedi 1er Aout 2026\n📍 1 chemin des vignes, Saint Victor la Coste 30290\n\nبَارَكَ اللهُ فِيكُمْ',
       from: process.env.TWILIO_PHONE_NUMBER,
       to: telephone
     });
