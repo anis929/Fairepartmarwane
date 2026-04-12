@@ -1,8 +1,7 @@
 {
-  "name": "nikah-marwane-imane",
+  "name": "fairepartmarwane",
   "version": "1.0.0",
-  "type": "module",
-  "description": "Faire-part numérique — Nikah de Marwane & Imane",
+  "description": "Faire-part numerique Nikah de Marwane et Imane",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
     "twilio": "^4.20.0"
